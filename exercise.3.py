@@ -19,9 +19,10 @@ with open('stations.csv', encoding = 'utf-8') as file:
 #create a list including only Seattle 
 
 #what I want to do is ascociate all codes for a city with one seperate list within a new dictionary 
-city_list = {}
-for city in items:
-    if city['State'] == 'OH':
-        city_list['city'] = 'OH'
-print(city_list)
+    #I was trying to sort stations but this didn't work.
+station_sort = []
+for station in items:
+    if station 
 
+#if I had had more time, I would have hopefully found a way to seperate the stations, or to have python identify the seperate station codes and run through my previously written code for each station. 
+#I ran out of time, sorry it's so incomplete!
