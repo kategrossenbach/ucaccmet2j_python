@@ -32,3 +32,12 @@ yearly_total_seattle = sum(month_list)
 yearly_total_precipitation.append(yearly_total_seattle)
 
 print(yearly_total_precipitation)
+
+relative_list = []
+for r in month_list:
+    relative = r/yearly_total_seattle
+    relative_list.append(relative)
+print(relative_list)
+
+with open('results.json', 'w', encoding = 'utf-8') as file: 
+    json.dump(relative_list, file, indent = 4)
