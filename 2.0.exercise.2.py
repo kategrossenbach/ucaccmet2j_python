@@ -33,18 +33,18 @@ print(monthly_precipitation)
 
 #calculate yearly totals
 yearly_total_precipitation = []
-yearly_total_seattle = sum(month_list)
+yearly_total_seattle = sum(monthly_precipitation)
 yearly_total_precipitation.append(yearly_total_seattle)
 
 print(yearly_total_precipitation)
 
 #calculate relative monthly totals, using yearly total from abovee
-relative_list = []
-for r in month_list:
+relative_monthly_precipitation = []
+for r in monthly_precipitation:
     relative = r/yearly_total_seattle
-    relative_list.append(relative)
-print(relative_list)
+    relative_monthly_precipitation.append(relative)
+print(relative_monthly_precipitation)
 
 #update results file
 with open('results.json', 'w', encoding = 'utf-8') as file: 
-    json.dump(relative_list, file, indent = 4)
+    json.dump(relative_monthly_precipitation, file, indent = 4)
