@@ -27,7 +27,8 @@ for y in months:
     month_list.append(total)
 
 print(month_list)
-
+yearly_total_precipitation = []
 yearly_total_seattle = sum(month_list)
+yearly_total_precipitation.append(yearly_total_seattle)
 
-print(yearly_total_seattle)
+print(yearly_total_precipitation)
