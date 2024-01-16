@@ -17,13 +17,17 @@ for y in precipitation_list:
     y['day'] = day 
 print(precipitation_list)
 
-year = [2010]
-total_yearly = []
-for y in year: 
-    sum = 0 
-    for input in precipitation_list:
-        if y == input['year']:
-            sum += input['value']
-    total_yearly.append(sum)
-print(total_yearly)
+month_list = []
+months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+for y in months:
+    total = 0 
+    for input in precipitation_list: 
+        if y == input['month']: 
+            total += input['value']
+    month_list.append(total)
 
+print(month_list)
+
+yearly_total_seattle = sum(month_list)
+
+print(yearly_total_seattle)
