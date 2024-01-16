@@ -20,16 +20,16 @@ for y in precipitation_list:
 print(precipitation_list)
 
 #calculate monthly totals 
-month_list = []
+monthly_precipitation = []
 months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 for y in months:
     total = 0 
     for input in precipitation_list: 
         if y == input['month']: 
             total += input['value']
-    month_list.append(total)
+    monthly_precipitation.append(total)
 
-print(month_list)
+print(monthly_precipitation)
 
 #calculate yearly totals
 yearly_total_precipitation = []
