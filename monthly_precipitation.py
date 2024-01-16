@@ -27,3 +27,6 @@ for y in months:
     month_list.append(sum)
 
 print(month_list)
+
+with open('results.json', 'w', encoding = 'utf-8') as file: 
+    json.dump(month_list, file, indent = 4)
